@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, Copy, Link, CheckCircle, ExternalLink, ShieldCheck } from "lucide-react";
+import { Mail, Phone, MapPin, Copy, Link, CheckCircle, ExternalLink, ShieldCheck, Github } from "lucide-react";
 import { PERSONAL_BIO } from "../data";
 
 interface ContactProps {
@@ -10,6 +10,7 @@ export default function Contact({ isDarkMode }: ContactProps) {
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedLinkedin, setCopiedLinkedin] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
+  const [copiedGithub, setCopiedGithub] = useState(false);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(PERSONAL_BIO.email);
@@ -21,6 +22,12 @@ export default function Contact({ isDarkMode }: ContactProps) {
     navigator.clipboard.writeText(PERSONAL_BIO.linkedinUrl);
     setCopiedLinkedin(true);
     setTimeout(() => setCopiedLinkedin(false), 2000);
+  };
+
+  const handleCopyGithub = () => {
+    navigator.clipboard.writeText(PERSONAL_BIO.githubUrl);
+    setCopiedGithub(true);
+    setTimeout(() => setCopiedGithub(false), 2000);
   };
 
   const handleCopyPhone = () => {
@@ -201,8 +208,52 @@ export default function Contact({ isDarkMode }: ContactProps) {
               </div>
             </div>
 
+            {/* GITHUB COLUMN CARD */}
+            <div className={`p-5 rounded-2xl border transition-all ${
+              isDarkMode 
+                ? "bg-[#111112]/50 border-white/5 hover:border-white/10" 
+                : "bg-white border-slate-150 hover:shadow-sm hover:border-slate-300"
+            }`}>
+              <div className="flex items-start justify-between">
+                <div className="flex items-center space-x-3.5">
+                  <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-400">
+                    <Github className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Official GitHub</span>
+                    <a 
+                      href={PERSONAL_BIO.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`text-sm font-bold hover:text-emerald-400 transition-colors flex items-center mt-0.5 ${
+                        isDarkMode ? "text-white" : "text-slate-850"
+                      }`}
+                    >
+                      GitHub Profile <ExternalLink className="w-3.5 h-3.5 ml-1 opacity-75 shrink-0" />
+                    </a>
+                  </div>
+                </div>
+
+                <button
+                  onClick={handleCopyGithub}
+                  className={`p-2 rounded-lg border text-xs transition-all cursor-pointer ${
+                    isDarkMode 
+                      ? "border-white/10 text-slate-400 hover:text-white hover:bg-white/5" 
+                      : "border-slate-250 text-slate-500 hover:text-slate-900"
+                  }`}
+                  title="Copy GitHub link"
+                >
+                  {copiedGithub ? (
+                    <span className="text-[9px] font-mono font-extrabold text-emerald-400 uppercase">Copied</span>
+                  ) : (
+                    <Copy className="w-3.5 h-3.5" />
+                  )}
+                </button>
+              </div>
+            </div>
+
             {/* LOCATION COLUMN CARD */}
-            <div className={`p-5 rounded-2xl border ${
+            <div className={`p-5 rounded-2xl border md:col-span-2 ${
               isDarkMode ? "bg-[#111112]/50 border-white/5" : "bg-white border-slate-150"
             }`}>
               <div className="flex items-center space-x-3.5">

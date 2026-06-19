@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowUp, Mail, Linkedin, Instagram, ShieldCheck } from "lucide-react";
+import { ArrowUp, Mail, Linkedin, Github, ShieldCheck } from "lucide-react";
 import { PERSONAL_BIO } from "../data";
 
 interface FooterProps {
@@ -65,15 +65,15 @@ export default function Footer({ isDarkMode }: FooterProps) {
               <Mail className="w-4 h-4" />
             </a>
             <a
-              href="https://www.instagram.com/gauthamrao_13"
+              href={PERSONAL_BIO.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
               className={`p-2 rounded-lg border hover:text-emerald-500 transition-colors ${
                 isDarkMode ? "border-white/10 text-slate-300 hover:bg-white/5" : "border-slate-200 text-slate-600 hover:bg-white"
               }`}
-              title="Visual Portfolio Feed"
+              title="Official GitHub Profile"
             >
-              <Instagram className="w-4 h-4" />
+              <Github className="w-4 h-4" />
             </a>
           </div>
 
@@ -101,9 +101,14 @@ export default function Footer({ isDarkMode }: FooterProps) {
             © 2026 Gautham Rao. Registered Master's candidate, Lancaster University.
           </p>
 
-          <div className="flex items-center space-x-1.5 text-[9px] font-mono text-slate-500 uppercase">
-            <ShieldCheck className="w-4 h-4 text-emerald-500" />
-            <span>Secure Enterprise Architecture Compiled • 2026 OK</span>
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+            <div className="flex items-center space-x-1.5 text-[9px] font-mono text-slate-500 uppercase">
+              <ShieldCheck className="w-4 h-4 text-emerald-500" />
+              <span>Secure Enterprise Architecture Compiled • 2026 OK</span>
+            </div>
+            <div className="text-[10px] font-mono text-emerald-500/80 uppercase tracking-wider font-extrabold text-center sm:text-right">
+              Designed & Developed via <span className="underline decoration-emerald-500/40">Google AI Studio</span>
+            </div>
           </div>
         </div>
 

@@ -9,6 +9,7 @@ export const PERSONAL_BIO = {
   location: "United Kingdom",
   openToOpportunities: "United Kingdom & Worldwide",
   linkedinUrl: "https://www.linkedin.com/in/gautham-rao-852b70232/",
+  githubUrl: "https://github.com/gauthamrao13",
   aboutMeParagraph: "Deeply passionate financial researcher holding an MSc in Money, Banking & Finance from Lancaster University and a Bachelor of Commerce (Accounting & Finance). Specializes in quantitative financial statement analysis, credit risk evaluation, and corporate valuation frameworks. Combining core financial principles with advanced analytical tools like Excel, SQL, and Power BI to translate complex data sets into highly strategic, actionable banking and risk insights.",
   keyStats: [
     { value: "2+", label: "Years of Experience" },

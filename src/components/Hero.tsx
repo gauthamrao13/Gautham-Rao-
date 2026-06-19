@@ -124,6 +124,14 @@ export default function Hero({ isDarkMode }: HeroProps) {
                 LinkedIn
               </a>
               <a
+                href={PERSONAL_BIO.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`hover:text-emerald-500 transition-colors ${isDarkMode ? "text-slate-300" : "text-slate-600"}`}
+              >
+                GitHub
+              </a>
+              <a
                 href={`mailto:${PERSONAL_BIO.email}`}
                 className={`hover:text-emerald-500 transition-colors ${isDarkMode ? "text-slate-300" : "text-slate-600"}`}
               >

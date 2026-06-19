@@ -8,6 +8,7 @@ export interface StockIndexInfo {
   high: number;
   low: number;
   isRealTime?: boolean;
+  isValued?: boolean;
 }
 
 export interface CurrencyRates {

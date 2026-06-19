@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-loader {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Custom animation properties */
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 60s linear infinite;
+}
+
+.pause-marquee {
+  animation-play-state: paused;
+}
+
+.animate-marquee-loader {
+  width: 100%;
+  animation: marquee-loader 1.8s ease-in-out infinite;
+}
+
+/* Smooth scrolling for single-page links */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Pads for sticky header and stock billboard */
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Refined custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}

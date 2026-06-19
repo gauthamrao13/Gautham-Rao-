@@ -1,0 +1,6 @@
+{
+  "name": "Gautham Raviraj Rao - Portfolio",
+  "description": "Premium banking, investment, and risk analysis portfolio website for Gautham Raviraj Rao with real-time daily stock index and currency ticker boards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

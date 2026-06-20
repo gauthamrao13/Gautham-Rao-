@@ -14,7 +14,7 @@ export default function Certifications({ isDarkMode }: CertificationsProps) {
     switch (status) {
       case "Completed":
         return (
-          <span className="inline-flex items-center text-[10px] sm:text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-full border border-emerald-500/20">
+          <span className="inline-flex items-center text-[10px] sm:text-xs font-mono font-bold bg-[#D4AF37]/10 text-[#D4AF37] px-2.5 py-1 rounded-full border border-[#D4AF37]/20">
             <CheckCircle className="w-3.5 h-3.5 mr-1" />
             Verified Complete
           </span>
@@ -47,7 +47,7 @@ export default function Certifications({ isDarkMode }: CertificationsProps) {
     <section 
       id="certifications" 
       className={`py-20 md:py-28 relative transition-colors duration-300 ${
-        isDarkMode ? "bg-[#0A0A0B]" : "bg-slate-50"
+        isDarkMode ? "bg-[#0B1426]" : "bg-slate-50"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -55,8 +55,8 @@ export default function Certifications({ isDarkMode }: CertificationsProps) {
         {/* Section Header */}
         <div className="flex flex-col space-y-2 mb-12 sm:mb-16">
           <div className="flex items-center space-x-2">
-            <span className="w-1.5 h-6 bg-emerald-500 rounded-full" />
-            <span className="text-xs font-mono text-emerald-500 uppercase tracking-widest font-bold">
+            <span className="w-1.5 h-6 bg-[#D4AF37] rounded-full" />
+            <span className="text-xs font-mono text-[#D4AF37] uppercase tracking-widest font-bold">
               Qualifications & Badges
             </span>
           </div>
@@ -65,16 +65,16 @@ export default function Certifications({ isDarkMode }: CertificationsProps) {
           }`}>
             Professional Certifications
           </h2>
-          <div className="h-[1px] w-20 bg-emerald-500/50 mt-1" />
+          <div className="h-[1px] w-20 bg-[#D4AF37]/50 mt-1" />
         </div>
 
         {/* Informative Security Header stating ONLY Gautham can modify these links */}
         <div className={`p-4 rounded-xl border mb-10 flex items-start space-x-3 max-w-3xl ${
           isDarkMode 
-            ? "bg-[#0D0D0E]/60 border-white/10 text-slate-400" 
+            ? "bg-[#1E293B] border-[#334155] text-slate-400" 
             : "bg-white border-slate-200 text-slate-600"
         }`}>
-          <ShieldAlert className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5 animate-pulse" />
+          <ShieldAlert className="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5 animate-pulse" />
           <div className="space-y-1">
             <h4 className={`text-xs font-mono uppercase tracking-wider font-extrabold ${isDarkMode ? "text-slate-200" : "text-slate-800"}`}>
               Secure Client Ownership Mode
@@ -93,10 +93,10 @@ export default function Certifications({ isDarkMode }: CertificationsProps) {
               className={`p-6 sm:p-8 rounded-2xl border flex flex-col justify-between transition-all duration-300 ${
                 cert.status === "Downloaded Proof" || cert.status === "Completed"
                   ? isDarkMode
-                    ? "bg-gradient-to-tr from-emerald-500/[0.03] to-[#0D0D0E]/60 border-white/10 hover:border-white/20 shadow-xl shadow-emerald-500/2"
-                    : "bg-white border-emerald-500/30 hover:border-emerald-500/50 hover:shadow-md"
+                    ? "bg-gradient-to-tr from-[#D4AF37]/[0.02] to-[#1E293B] border-[#334155] hover:border-[#D4AF37]/20 shadow-xl shadow-[#D4AF37]/0.01"
+                    : "bg-white border-amber-500/30 hover:border-[#D4AF37] hover:shadow-md"
                   : isDarkMode
-                  ? "bg-[#0D0D0E]/40 border-white/10 hover:border-white/20"
+                  ? "bg-[#1E293B] border-[#334155] hover:border-[#D4AF37]/20"
                   : "bg-white border-slate-200 hover:border-slate-300"
               }`}
             >
@@ -110,8 +110,8 @@ export default function Certifications({ isDarkMode }: CertificationsProps) {
                           ? "bg-black/40 border-white/5 text-amber-500"
                           : "bg-slate-105 border-slate-200 text-amber-600"
                         : isDarkMode
-                        ? "bg-black/40 border-white/5 text-emerald-500"
-                        : "bg-slate-105 border-slate-200 text-emerald-600"
+                        ? "bg-black/40 border-white/5 text-[#D4AF37]"
+                        : "bg-slate-105 border-slate-200 text-amber-700"
                     }`}>
                       {cert.issuer.toUpperCase()}
                     </span>
@@ -141,16 +141,16 @@ export default function Certifications({ isDarkMode }: CertificationsProps) {
               </div>
 
               {/* LinkedIn Proof Link */}
-              <div className="mt-6 pt-4 border-t border-slate-800/10 flex items-center justify-between">
+              <div className="mt-6 pt-4 border-t border-[#334155]/30 flex items-center justify-between">
                 <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest font-extrabold flex items-center">
-                  <Award className="w-3.5 h-3.5 mr-1 text-emerald-400" />
+                  <Award className="w-3.5 h-3.5 mr-1 text-[#D4AF37]" />
                   Verified Credentials
                 </span>
                 <a
                   href="https://www.linkedin.com/in/gautham-rao-852b70232/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-mono font-bold text-emerald-500 hover:text-emerald-400 flex items-center transition-colors"
+                  className="text-xs font-mono font-bold text-[#D4AF37] hover:text-amber-400 flex items-center transition-colors"
                 >
                   View proof <ExternalLink className="w-3.5 h-3.5 ml-1" />
                 </a>

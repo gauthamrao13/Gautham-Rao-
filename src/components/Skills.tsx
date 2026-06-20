@@ -10,7 +10,7 @@ export default function Skills({ isDarkMode }: SkillsProps) {
     {
       title: "Finance & Banking Domain",
       icon: TrendingUp,
-      color: "from-emerald-500 to-teal-600",
+      color: "from-amber-500 to-[#D4AF37]",
       skills: [
         "Financial Statement Analysis",
         "Financial Modeling (Three-Statement)",
@@ -26,7 +26,7 @@ export default function Skills({ isDarkMode }: SkillsProps) {
     {
       title: "Digital Analytics & Platforms",
       icon: Cpu,
-      color: "from-sky-500 to-cyan-600",
+      color: "from-slate-500 to-slate-600",
       skills: [
         "Advanced Microsoft Excel (VBA, XLOOKUP, Pivot Tables, Macros)",
         "Structured Query Language (SQL) Querying",
@@ -39,7 +39,7 @@ export default function Skills({ isDarkMode }: SkillsProps) {
     {
       title: "Professional Core Competencies",
       icon: Users,
-      color: "from-slate-500 to-slate-700",
+      color: "from-[#D4AF37]/60 to-amber-600",
       skills: [
         "Auditing Control Identification",
         "Rigorous Quantitative Analysis",
@@ -55,7 +55,7 @@ export default function Skills({ isDarkMode }: SkillsProps) {
     <section 
       id="skills" 
       className={`py-20 md:py-28 relative transition-colors duration-300 ${
-        isDarkMode ? "bg-[#0A0A0B]" : "bg-slate-50"
+        isDarkMode ? "bg-[#0B1426]" : "bg-slate-50"
       }`}
     >
       {/* Decorative vector grid backdrops to reinforce a high-tech BlackRock financial aesthetic */}
@@ -66,8 +66,8 @@ export default function Skills({ isDarkMode }: SkillsProps) {
         {/* Section Header */}
         <div className="flex flex-col space-y-2 mb-12 sm:mb-16">
           <div className="flex items-center space-x-2">
-            <span className="w-1.5 h-6 bg-emerald-500 rounded-full" />
-            <span className="text-xs font-mono text-emerald-500 uppercase tracking-widest font-bold">
+            <span className="w-1.5 h-6 bg-[#D4AF37] rounded-full" />
+            <span className="text-xs font-mono text-[#D4AF37] uppercase tracking-widest font-bold">
               Competency Matrix
             </span>
           </div>
@@ -76,7 +76,7 @@ export default function Skills({ isDarkMode }: SkillsProps) {
           }`}>
             Technical Skills & Core Competencies
           </h2>
-          <div className="h-[1px] w-20 bg-emerald-500/50 mt-1" />
+          <div className="h-[1px] w-20 bg-[#D4AF37]/50 mt-1" />
         </div>
 
         {/* Competency Bento Grids */}
@@ -88,12 +88,12 @@ export default function Skills({ isDarkMode }: SkillsProps) {
                 key={groupIdx}
                 className={`p-6 sm:p-8 rounded-2xl border flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1 ${
                   isDarkMode 
-                    ? "bg-[#0D0D0E]/60 border-white/10 hover:border-white/20 shadow-xl" 
+                    ? "bg-[#1E293B] border-[#334155] hover:border-[#D4AF37]/20 shadow-xl" 
                     : "bg-white border-slate-200 hover:border-slate-300 hover:shadow-md"
                 }`}
               >
                 {/* Card Title Header with Gradient Accents */}
-                <div className="flex items-center space-x-3 mb-6 pb-4 border-b border-[#1e293b]/15">
+                <div className="flex items-center space-x-3 mb-6 pb-4 border-b border-[#334155]/35">
                   <div className={`p-2.5 rounded-lg bg-gradient-to-tr ${group.color} text-white shrink-0`}>
                     <Icon className="w-5 h-5" />
                   </div>
@@ -108,8 +108,8 @@ export default function Skills({ isDarkMode }: SkillsProps) {
                 <div className="flex-grow flex flex-col space-y-4">
                   {group.skills.map((skill, skillIdx) => (
                     <div key={skillIdx} className="flex items-start space-x-3 group/skill">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5 transition-transform group-hover/skill:scale-110" />
-                      <span className={`text-xs font-sans font-medium hover:text-emerald-400 transition-colors leading-tight ${
+                      <CheckCircle2 className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5 transition-transform group-hover/skill:scale-110" />
+                      <span className={`text-xs font-sans font-medium hover:text-[#D4AF37] transition-colors leading-tight ${
                         isDarkMode ? "text-slate-300" : "text-slate-700"
                       }`}>
                         {skill}
@@ -124,7 +124,7 @@ export default function Skills({ isDarkMode }: SkillsProps) {
 
         {/* Advanced Excel and DBMS Mini Spotlight Focus Block */}
         <div className={`mt-12 p-6 sm:p-8 rounded-2xl border ${
-          isDarkMode ? "bg-[#0D0D0E]/40 border-white/10" : "bg-white border-slate-200"
+          isDarkMode ? "bg-[#1E293B] border-[#334155]" : "bg-white border-slate-200"
         }`}>
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="space-y-2 max-w-2xl">
@@ -140,7 +140,7 @@ export default function Skills({ isDarkMode }: SkillsProps) {
               {["Financial Modeling", "Scenario Sensitivity", "VBA & Macros", "SQL Querying", "Equity Ratios", "Portfolio Tracker"].map((tag) => (
                 <span 
                   key={tag}
-                  className="bg-emerald-500/10 text-emerald-400 text-[10px] font-mono font-bold px-2.5 py-1 rounded inline-flex items-center space-x-1 border border-emerald-500/25 uppercase"
+                  className="bg-[#D4AF37]/10 text-[#D4AF37] text-[10px] font-mono font-bold px-2.5 py-1 rounded inline-flex items-center space-x-1 border border-[#D4AF37]/25 uppercase"
                 >
                   <TableProperties className="w-3.5 h-3.5 mr-1" />
                   {tag}

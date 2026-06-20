@@ -28,7 +28,7 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
     <section 
       id="projects" 
       className={`py-20 md:py-28 relative transition-colors duration-300 ${
-        isDarkMode ? "bg-[#0A0A0B]" : "bg-slate-50"
+        isDarkMode ? "bg-[#0B1426]" : "bg-slate-50"
       }`}
     >
       {/* Visual blueprint background grid */}
@@ -39,8 +39,8 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
         {/* Section Header */}
         <div className="flex flex-col space-y-2 mb-10 sm:mb-14">
           <div className="flex items-center space-x-2">
-            <span className="w-1.5 h-6 bg-emerald-500 rounded-full" />
-            <span className="text-xs font-mono text-emerald-500 uppercase tracking-widest font-bold">
+            <span className="w-1.5 h-6 bg-[#D4AF37] rounded-full" />
+            <span className="text-xs font-mono text-[#D4AF37] uppercase tracking-widest font-bold">
               Productive Ledger
             </span>
           </div>
@@ -49,7 +49,7 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
           }`}>
             Selected Financial Work
           </h2>
-          <div className="h-[1px] w-20 bg-emerald-500/50 mt-1" />
+          <div className="h-[1px] w-20 bg-[#D4AF37]/50 mt-1" />
         </div>
 
         {/* Filter Navigation list */}
@@ -60,13 +60,13 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
                onClick={() => setActiveCategory(cat)}
                className={`text-[10px] sm:text-xs font-mono px-3.5 py-1.5 rounded-lg border transition-all uppercase tracking-wide cursor-pointer ${
                  activeCategory === cat
-                   ? "bg-emerald-500 border-emerald-500 text-white font-bold"
+                   ? "bg-[#D4AF37] border-[#D4AF37] text-[#0B1426] font-bold"
                    : isDarkMode
-                   ? "bg-[#0D0D0E]/60 border-white/10 text-slate-400 hover:text-white"
+                   ? "bg-[#1E293B] border-[#334155] text-slate-400 hover:text-white"
                    : "bg-white border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300"
                }`}
             >
-              {cat}
+               {cat}
             </button>
           ))}
         </div>
@@ -75,7 +75,7 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
         {excelModels.length > 0 && (
           <div className="space-y-6 mb-12 sm:mb-16">
             <div className="flex items-center space-x-2.5">
-              <Sparkles className="w-4 h-4 text-emerald-400 shrink-0" />
+              <Sparkles className="w-4 h-4 text-[#D4AF37] shrink-0" />
               <h3 className={`text-xs font-mono uppercase tracking-widest font-extrabold ${isDarkMode ? "text-slate-300" : "text-slate-700"}`}>
                 Flagship Interactive Financial Models (.xlsx)
               </h3>
@@ -87,16 +87,16 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
                   key={project.id}
                   className={`p-6 sm:p-8 rounded-2xl border flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-1.5 ${
                     isDarkMode
-                      ? "bg-gradient-to-tr from-emerald-500/[0.03] to-[#0D0D0E]/60 border-white/10 shadow-xl shadow-emerald-500/2"
-                      : "bg-white border-emerald-500/30 hover:shadow-lg hover:border-emerald-500/50"
+                      ? "bg-gradient-to-tr from-[#D4AF37]/[0.02] to-[#1E293B] border-[#334155] shadow-xl shadow-[#D4AF37]/[0.01]"
+                      : "bg-white border-amber-500/30 hover:shadow-lg hover:border-[#D4AF37]"
                   }`}
                 >
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                      <span className="text-[9px] font-mono uppercase bg-emerald-500/10 text-emerald-400 px-2.5 py-0.5 rounded border border-emerald-500/20 font-bold tracking-widest">
+                      <span className="text-[9px] font-mono uppercase bg-[#D4AF37]/10 text-[#D4AF37] px-2.5 py-0.5 rounded border border-[#D4AF37]/20 font-bold tracking-widest">
                         {project.category}
                       </span>
-                      <span className="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[9px] font-mono px-2 py-0.5 rounded font-bold uppercase flex items-center shadow-sm">
+                      <span className="bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-[#D4AF37] text-[9px] font-mono px-2 py-0.5 rounded font-bold uppercase flex items-center shadow-sm">
                         <Sparkles className="w-3 h-3 mr-1 animate-pulse" />
                         Excel Assets Completed
                       </span>
@@ -121,13 +121,13 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
                           <div 
                             key={metricIdx}
                             className={`p-2.5 rounded-lg border ${
-                              isDarkMode ? "bg-[#0D0D0E]/60 border-white/10" : "bg-slate-50 border-slate-150"
+                              isDarkMode ? "bg-[#1E293B] border-[#334155]" : "bg-slate-50 border-slate-150"
                             }`}
                           >
                             <span className="text-[9px] font-mono uppercase text-slate-400 block tracking-tight">
                               {metric.label}
                             </span>
-                            <span className="text-[11px] font-mono font-extrabold block mt-0.5 text-emerald-500">
+                            <span className="text-[11px] font-mono font-extrabold block mt-0.5 text-[#D4AF37]">
                               {metric.value}
                             </span>
                           </div>
@@ -146,8 +146,8 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
                             key={tag}
                             className={`text-[9px] font-mono px-2 py-0.5 rounded-md border ${
                               isDarkMode
-                                ? "bg-emerald-500/5 border-emerald-500/15 text-emerald-400"
-                                : "bg-emerald-500/[0.02] border-emerald-500/20 text-emerald-600"
+                                ? "bg-[#D4AF37]/5 border-[#D4AF37]/15 text-[#D4AF37]"
+                                : "bg-[#D4AF37]/[0.02] border-[#D4AF37]/20 text-[#D4AF37]"
                             }`}
                           >
                             {tag}
@@ -162,14 +162,14 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
                       href={project.googleSheetUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-700 text-white font-mono text-xs uppercase font-extrabold py-3.5 px-4 rounded-lg transform hover:-translate-y-0.5 transition-all shadow-md shadow-emerald-500/10 cursor-pointer focus:outline-none text-center"
+                      className="w-full inline-flex items-center justify-center space-x-2 bg-[#D4AF37] hover:bg-amber-600 text-[#0B1426] font-mono text-xs uppercase font-extrabold py-3.5 px-4 rounded-lg transform hover:-translate-y-0.5 transition-all shadow-md shadow-[#D4AF37]/10 cursor-pointer focus:outline-none text-center"
                     >
                       <TableProperties className="w-4 h-4 shrink-0" />
                       <span>View Google Sheet</span>
                     </a>
                     <p className="text-[9px] text-center text-slate-400 font-mono mt-2">
                        Platform: Dual-Optimized Google Sheets & Excel | Dynamic Calculation Formulas
-                    </p>
+                     </p>
                   </div>
                 </div>
               ))}
@@ -178,11 +178,11 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
             {/* Google Spreadsheet / Excel Access & Disclaimer Section */}
             <div className={`mt-8 p-6 rounded-2xl border text-left transition-all ${
               isDarkMode 
-                ? "bg-[#0D0D0E]/60 border-emerald-500/10 shadow-xl" 
-                : "bg-emerald-50/[0.15] border-emerald-500/20 shadow-sm"
+                ? "bg-[#1E293B] border-[#D4AF37]/10 shadow-xl" 
+                : "bg-amber-50/[0.02] border-[#D4AF37]/20 shadow-sm"
             }`}>
               <div className="space-y-3">
-                <span className="inline-flex items-center text-[9px] uppercase font-mono font-extrabold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 tracking-wider">
+                <span className="inline-flex items-center text-[9px] uppercase font-mono font-extrabold px-2 py-0.5 rounded bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/20 tracking-wider">
                   Spreadsheet Availability & Interactive Review
                 </span>
                 <p className={`text-xs sm:text-[13px] leading-relaxed font-sans ${isDarkMode ? "text-slate-400" : "text-slate-650"}`}>
@@ -210,7 +210,7 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
                   key={project.id}
                   className={`p-6 rounded-2xl border flex flex-col justify-between transition-all duration-300 hover:shadow-md ${
                     isDarkMode
-                      ? "bg-[#0B0B0C]/80 border-white/10 hover:border-white/20"
+                      ? "bg-[#1E293B] border-[#334155] hover:border-[#D4AF37]/20"
                       : "bg-white border-slate-200 hover:border-slate-300"
                   }`}
                 >
@@ -255,10 +255,10 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
                   {/* Foot bar resembling view proof button */}
                   <div className="mt-6 pt-4 border-t border-slate-800/10 flex items-center justify-between">
                     <span className="text-[9px] font-mono text-slate-400 uppercase tracking-widest font-extrabold flex items-center">
-                      <CheckCircle className="w-3.5 h-3.5 mr-1 text-emerald-400" />
+                      <CheckCircle className="w-3.5 h-3.5 mr-1 text-[#D4AF37]" />
                       Audited Ledger Code
                     </span>
-                    <span className="text-[10px] font-mono font-bold text-emerald-500">
+                    <span className="text-[10px] font-mono font-bold text-[#D4AF37]">
                       SECURED
                     </span>
                   </div>

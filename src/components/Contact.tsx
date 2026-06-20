@@ -40,7 +40,7 @@ export default function Contact({ isDarkMode }: ContactProps) {
     <section 
       id="contact" 
       className={`py-20 md:py-28 relative transition-colors duration-300 ${
-        isDarkMode ? "bg-[#0A0A0B] text-slate-200" : "bg-white text-slate-800"
+        isDarkMode ? "bg-[#0B1426] text-[#F8FAFC]" : "bg-white text-slate-800"
       }`}
     >
       {/* Decorative vector background grid lines representing Goldman Sachs terminal look */}
@@ -51,8 +51,8 @@ export default function Contact({ isDarkMode }: ContactProps) {
         {/* Section Header */}
         <div className="flex flex-col items-center text-center space-y-2 mb-12 sm:mb-16">
           <div className="flex items-center space-x-2">
-            <span className="w-1.5 h-6 bg-emerald-500 rounded-full" />
-            <span className="text-xs font-mono text-emerald-500 uppercase tracking-widest font-bold">
+            <span className="w-1.5 h-6 bg-[#D4AF37] rounded-full" />
+            <span className="text-xs font-mono text-[#D4AF37] uppercase tracking-widest font-bold">
               Direct Channels
             </span>
           </div>
@@ -61,9 +61,9 @@ export default function Contact({ isDarkMode }: ContactProps) {
           }`}>
             Contact Gautham
           </h2>
-          <div className="h-[1px] w-12 bg-emerald-500/50 mt-1" />
+          <div className="h-[1px] w-12 bg-[#D4AF37]/50 mt-1" />
           <p className={`text-xs sm:text-sm mt-3.5 max-w-lg leading-relaxed ${
-            isDarkMode ? "text-slate-400" : "text-slate-600"
+            isDarkMode ? "text-slate-400" : "text-slate-650"
           }`}>
             Recruiters, hiring managers, and professional institutions can get in touch with me directly through any of the official, secured channels listed below.
           </p>
@@ -72,30 +72,30 @@ export default function Contact({ isDarkMode }: ContactProps) {
         {/* Centralised Premium Contact Bento Block */}
         <div className={`p-6 sm:p-10 rounded-3xl border transition-all duration-300 shadow-2xl relative overflow-hidden ${
           isDarkMode 
-            ? "bg-[#0D0D0E]/80 border-white/10 shadow-emerald-500/[0.01]" 
+            ? "bg-[#1E293B] border-[#334155]" 
             : "bg-slate-50 border-slate-200 shadow-lg shadow-slate-100"
         }`}>
           {/* Subtle glowing spot */}
-          <div className="absolute top-0 right-0 w-44 h-44 rounded-full bg-emerald-500/5 blur-[80px] pointer-events-none" />
+          <div className="absolute top-0 right-0 w-44 h-44 rounded-full bg-[#D4AF37]/5 blur-[80px] pointer-events-none" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             
             {/* EMAIL COLUMN CARD */}
             <div className={`p-5 rounded-2xl border transition-all ${
               isDarkMode 
-                ? "bg-[#111112]/50 border-white/5 hover:border-white/10" 
+                ? "bg-[#111827] border-[#334155] hover:border-[#D4AF37]/20" 
                 : "bg-white border-slate-150 hover:shadow-sm hover:border-slate-300"
             }`}>
               <div className="flex items-start justify-between">
                 <div className="flex items-center space-x-3.5">
-                  <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-400">
+                  <div className="p-3 rounded-xl bg-[#D4AF37]/10 text-[#D4AF37]">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
                     <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Official Email</span>
                     <a 
                       href={`mailto:${PERSONAL_BIO.email}`}
-                      className={`text-sm font-bold hover:text-emerald-400 transition-colors block mt-0.5 break-all ${
+                      className={`text-sm font-bold hover:text-[#D4AF37] transition-colors block mt-0.5 break-all ${
                         isDarkMode ? "text-white" : "text-slate-850"
                       }`}
                     >
@@ -114,7 +114,7 @@ export default function Contact({ isDarkMode }: ContactProps) {
                   title="Copy email copy"
                 >
                   {copiedEmail ? (
-                    <span className="text-[9px] font-mono font-extrabold text-emerald-400 uppercase">Copied</span>
+                    <span className="text-[9px] font-mono font-extrabold text-[#D4AF37] uppercase">Copied</span>
                   ) : (
                     <Copy className="w-3.5 h-3.5" />
                   )}
@@ -125,19 +125,19 @@ export default function Contact({ isDarkMode }: ContactProps) {
             {/* PHONE COLUMN CARD */}
             <div className={`p-5 rounded-2xl border transition-all ${
               isDarkMode 
-                ? "bg-[#111112]/50 border-white/5 hover:border-white/10" 
+                ? "bg-[#111827] border-[#334155] hover:border-[#D4AF37]/20" 
                 : "bg-white border-slate-150 hover:shadow-sm hover:border-slate-300"
             }`}>
               <div className="flex items-start justify-between">
                 <div className="flex items-center space-x-3.5">
-                  <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-400">
+                  <div className="p-3 rounded-xl bg-[#D4AF37]/10 text-[#D4AF37]">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
                     <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Direct UK Line</span>
                     <a 
                       href={`tel:${PERSONAL_BIO.phone.replace(/\s+/g, "")}`}
-                      className={`text-sm font-bold hover:text-emerald-400 transition-colors block mt-0.5 ${
+                      className={`text-sm font-bold hover:text-[#D4AF37] transition-colors block mt-0.5 ${
                         isDarkMode ? "text-white" : "text-slate-850"
                       }`}
                     >
@@ -156,7 +156,7 @@ export default function Contact({ isDarkMode }: ContactProps) {
                   title="Copy telephone link"
                 >
                   {copiedPhone ? (
-                    <span className="text-[9px] font-mono font-extrabold text-emerald-400 uppercase">Copied</span>
+                    <span className="text-[9px] font-mono font-extrabold text-[#D4AF37] uppercase">Copied</span>
                   ) : (
                     <Copy className="w-3.5 h-3.5" />
                   )}
@@ -167,12 +167,12 @@ export default function Contact({ isDarkMode }: ContactProps) {
             {/* LINKEDIN COLUMN CARD */}
             <div className={`p-5 rounded-2xl border transition-all ${
               isDarkMode 
-                ? "bg-[#111112]/50 border-white/5 hover:border-white/10" 
+                ? "bg-[#111827] border-[#334155] hover:border-[#D4AF37]/20" 
                 : "bg-white border-slate-150 hover:shadow-sm hover:border-slate-300"
             }`}>
               <div className="flex items-start justify-between">
                 <div className="flex items-center space-x-3.5">
-                  <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-400">
+                  <div className="p-3 rounded-xl bg-[#D4AF37]/10 text-[#D4AF37]">
                     <Link className="w-5 h-5" />
                   </div>
                   <div>
@@ -181,7 +181,7 @@ export default function Contact({ isDarkMode }: ContactProps) {
                       href={PERSONAL_BIO.linkedinUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`text-sm font-bold hover:text-emerald-400 transition-colors flex items-center mt-0.5 ${
+                      className={`text-sm font-bold hover:text-[#D4AF37] transition-colors flex items-center mt-0.5 ${
                         isDarkMode ? "text-white" : "text-slate-850"
                       }`}
                     >
@@ -200,7 +200,7 @@ export default function Contact({ isDarkMode }: ContactProps) {
                   title="Copy profile link"
                 >
                   {copiedLinkedin ? (
-                    <span className="text-[9px] font-mono font-extrabold text-emerald-400 uppercase">Copied</span>
+                    <span className="text-[9px] font-mono font-extrabold text-[#D4AF37] uppercase">Copied</span>
                   ) : (
                     <Copy className="w-3.5 h-3.5" />
                   )}
@@ -211,12 +211,12 @@ export default function Contact({ isDarkMode }: ContactProps) {
             {/* GITHUB COLUMN CARD */}
             <div className={`p-5 rounded-2xl border transition-all ${
               isDarkMode 
-                ? "bg-[#111112]/50 border-white/5 hover:border-white/10" 
+                ? "bg-[#111827] border-[#334155] hover:border-[#D4AF37]/20" 
                 : "bg-white border-slate-150 hover:shadow-sm hover:border-slate-300"
             }`}>
               <div className="flex items-start justify-between">
                 <div className="flex items-center space-x-3.5">
-                  <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-400">
+                  <div className="p-3 rounded-xl bg-[#D4AF37]/10 text-[#D4AF37]">
                     <Github className="w-5 h-5" />
                   </div>
                   <div>
@@ -225,7 +225,7 @@ export default function Contact({ isDarkMode }: ContactProps) {
                       href={PERSONAL_BIO.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`text-sm font-bold hover:text-emerald-400 transition-colors flex items-center mt-0.5 ${
+                      className={`text-sm font-bold hover:text-[#D4AF37] transition-colors flex items-center mt-0.5 ${
                         isDarkMode ? "text-white" : "text-slate-850"
                       }`}
                     >
@@ -244,7 +244,7 @@ export default function Contact({ isDarkMode }: ContactProps) {
                   title="Copy GitHub link"
                 >
                   {copiedGithub ? (
-                    <span className="text-[9px] font-mono font-extrabold text-emerald-400 uppercase">Copied</span>
+                    <span className="text-[9px] font-mono font-extrabold text-[#D4AF37] uppercase">Copied</span>
                   ) : (
                     <Copy className="w-3.5 h-3.5" />
                   )}
@@ -254,10 +254,10 @@ export default function Contact({ isDarkMode }: ContactProps) {
 
             {/* LOCATION COLUMN CARD */}
             <div className={`p-5 rounded-2xl border md:col-span-2 ${
-              isDarkMode ? "bg-[#111112]/50 border-white/5" : "bg-white border-slate-150"
+              isDarkMode ? "bg-[#111827] border-[#334155]" : "bg-white border-slate-150"
             }`}>
               <div className="flex items-center space-x-3.5">
-                <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-400">
+                <div className="p-3 rounded-xl bg-[#D4AF37]/10 text-[#D4AF37]">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
@@ -267,7 +267,7 @@ export default function Contact({ isDarkMode }: ContactProps) {
                   }`}>
                     {PERSONAL_BIO.location}
                   </span>
-                  <span className="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[9px] font-mono font-bold px-2 py-0.5 rounded uppercase mt-1 inline-block">
+                  <span className="bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-[#D4AF37] text-[9px] font-mono font-bold px-2 py-0.5 rounded uppercase mt-1 inline-block">
                     OPEN TO OPPORTUNITIES IN UK & WORLDWIDE
                   </span>
                 </div>
@@ -278,7 +278,7 @@ export default function Contact({ isDarkMode }: ContactProps) {
 
           <div className="mt-8 pt-6 border-t border-slate-800/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] font-mono text-slate-400 uppercase tracking-wider">
             <span className="flex items-center">
-              <ShieldCheck className="w-4 h-4 mr-1.5 text-emerald-500" />
+              <ShieldCheck className="w-4 h-4 mr-1.5 text-[#D4AF37]" />
               Secured Connection Ledger Active
             </span>
             <span>Last Updated: June 2026</span>

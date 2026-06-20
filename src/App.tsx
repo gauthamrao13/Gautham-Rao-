@@ -49,29 +49,29 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="fixed inset-0 bg-[#0A0A0B] flex flex-col items-center justify-center z-50">
+      <div className="fixed inset-0 bg-[#0B1426] flex flex-col items-center justify-center z-50">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808005_1px,transparent_1px),linear-gradient(to_bottom,#80808005_1px,transparent_1px)] bg-[size:16px_16px]" />
         
         <div className="space-y-6 text-center max-w-sm px-6 relative z-10 select-none">
           {/* Visual logo spinning */}
           <div className="relative w-16 h-16 mx-auto flex items-center justify-center">
             {/* outer loading ring */}
-            <div className="absolute inset-0 rounded-full border-2 border-emerald-500/10 border-t-emerald-500 animate-spin" />
-            <Landmark className="w-6 h-6 text-emerald-400 animate-pulse" />
+            <div className="absolute inset-0 rounded-full border-2 border-[#D4AF37]/10 border-t-[#D4AF37] animate-spin" />
+            <Landmark className="w-6 h-6 text-[#D4AF37] animate-pulse" />
           </div>
 
           <div className="space-y-2">
             <h2 className="text-sm font-mono tracking-[0.25em] text-white uppercase font-extrabold">
               Gautham Rao
             </h2>
-            <p className="text-[10px] font-mono tracking-widest text-[#10b981]/80 animate-pulse uppercase">
+            <p className="text-[10px] font-mono tracking-widest text-[#D4AF37]/80 animate-pulse uppercase">
               Connecting Market Tickers...
             </p>
           </div>
 
           {/* Dummy visual progress indicator */}
           <div className="h-[2px] w-36 mx-auto bg-slate-900 overflow-hidden rounded-full">
-            <div className="h-full bg-emerald-500 rounded-full animate-marquee-loader" />
+            <div className="h-full bg-[#D4AF37] rounded-full animate-marquee-loader" />
           </div>
         </div>
 
@@ -85,7 +85,7 @@ export default function App() {
 
   return (
     <div className={`min-h-screen text-slate-800 antialiased font-sans transition-colors duration-300 ${
-      isDarkMode ? "bg-[#0A0A0B] text-slate-200" : "bg-slate-50 text-slate-800"
+      isDarkMode ? "bg-[#0B1426] text-[#F8FAFC]" : "bg-slate-50 text-slate-800"
     }`}>
       
       {/* 1. Live Bloomberg Billboard */}

@@ -164,12 +164,12 @@ export default function Ticker() {
     ];
 
     return crossRates.map((item, idx) => (
-      <div key={`curr-${idx}`} className="flex items-center space-x-2 px-6 border-r border-white/10 py-2 shrink-0">
-        <span className="text-[11px] font-mono font-semibold text-slate-400">{item.pair}</span>
-        <span className="text-[11px] font-mono font-bold text-emerald-400">
+      <div key={`curr-${idx}`} className="flex items-center space-x-2 px-6 border-r border-[#334155] py-2 shrink-0">
+        <span className="text-[11px] font-mono font-semibold text-[#CBD5E1]">{item.pair}</span>
+        <span className="text-[11px] font-mono font-bold text-[#D4AF37]">
           {item.rate.toFixed(3)}
         </span>
-        <TrendingUp className="w-3 h-3 text-emerald-500 animate-pulse" />
+        <TrendingUp className="w-3 h-3 text-[#D4AF37] animate-pulse" />
       </div>
     ));
   };
@@ -177,11 +177,11 @@ export default function Ticker() {
   const marqueeItems = [...stocks, ...stocks];
 
   return (
-    <div className="w-full bg-black border-y border-white/10 select-none overflow-hidden relative z-40 shadow-xl">
-      <div className="absolute left-0 top-0 bottom-0 bg-[#059669] px-2.5 md:px-4 text-[10px] font-mono text-white flex items-center justify-center font-extrabold tracking-widest uppercase z-50 shadow-lg border-r border-white/10 shrink-0">
+    <div className="w-full bg-[#111827] border-y border-[#334155] select-none overflow-hidden relative z-40 shadow-xl">
+      <div className="absolute left-0 top-0 bottom-0 bg-[#D4AF37] px-2.5 md:px-4 text-[10px] font-mono text-[#0B1426] flex items-center justify-center font-extrabold tracking-widest uppercase z-50 shadow-lg border-r border-[#334155] shrink-0">
         <span className="relative flex h-2 w-2 mr-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-100"></span>
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37]/75"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-100"></span>
         </span>
         Live Markets
       </div>
@@ -190,14 +190,14 @@ export default function Ticker() {
         <div className="flex animate-marquee whitespace-nowrap items-center hover:pause-marquee">
           {loading ? (
             <div className="flex items-center space-x-4 pl-4 shrink-0">
-              <span className="text-slate-400 text-xs font-mono">Initializing market terminal feeds...</span>
+              <span className="text-[#CBD5E1] text-xs font-mono font-medium">Initializing market terminal feeds...</span>
             </div>
           ) : (
             <>
               {/* Dynamic Timestamp Indicator */}
-              <div className="flex items-center space-x-1.5 px-6 border-r border-white/10 py-2 shrink-0 text-[10px] font-mono font-bold text-white/50 bg-slate-950/40">
-                <RefreshCw className="w-3 h-3 text-emerald-500 animate-spin" style={{ animationDuration: '6s' }} />
-                <span className="uppercase tracking-wider">{updatedAt || "FEED OK"}</span>
+              <div className="flex items-center space-x-1.5 px-6 border-r border-[#334155] py-2 shrink-0 text-[10px] font-mono font-bold text-white/50 bg-[#0B1426]/70">
+                <RefreshCw className="w-3 h-3 text-[#D4AF37] animate-spin" style={{ animationDuration: '6s' }} />
+                <span className="uppercase tracking-wider text-[#CBD5E1]">{updatedAt || "FEED OK"}</span>
               </div>
 
               {/* Render Stocks */}
@@ -206,30 +206,30 @@ export default function Ticker() {
                 return (
                   <div
                     key={`stock-${stock.symbol}-${index}`}
-                    className={`flex items-center space-x-2 px-6 border-r border-white/10 py-2 shrink-0 ${
+                    className={`flex items-center space-x-2 px-6 border-r border-[#334155] py-2 shrink-0 ${
                       stock.isValued 
-                        ? "bg-emerald-950/30 border-x border-emerald-500/15" 
+                        ? "bg-[#1E293B]/40 border-x border-[#D4AF37]/20" 
                         : ""
                     }`}
                   >
                     <span className={`text-[10px] font-mono px-1 rounded font-bold uppercase ${
                       stock.isValued
-                        ? "bg-emerald-500/20 border border-emerald-500/30 text-emerald-300"
+                        ? "bg-[#D4AF37]/20 border border-[#D4AF37]/30 text-[#D4AF37]"
                         : "bg-white/5 border border-white/10 text-slate-300"
                     }`}>
                       {stock.isValued ? "Model" : stock.country.substring(0, 3)}
                     </span>
                     <span className={`text-[11px] font-sans font-bold tracking-tight ${
-                      stock.isValued ? "text-emerald-300" : "text-white"
+                      stock.isValued ? "text-[#D4AF37]" : "text-[#F8FAFC]"
                     }`}>
                       {stock.name}
                     </span>
-                    <span className="text-[11px] font-mono font-medium text-slate-300">
+                    <span className="text-[11px] font-mono font-medium text-[#CBD5E1]">
                       {stock.price.toLocaleString(undefined, { minimumFractionDigits: 2 })}
                     </span>
                     <span
                       className={`flex items-center text-[10px] font-mono font-bold px-1 rounded ${
-                        isPositive ? "text-emerald-400 bg-emerald-950/40" : "text-rose-400 bg-rose-950/40"
+                        isPositive ? "text-[#D4AF37] bg-[#D4AF37]/10" : "text-rose-400 bg-rose-950/40"
                       }`}
                     >
                       {isPositive ? (

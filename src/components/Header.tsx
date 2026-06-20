@@ -45,14 +45,14 @@ export default function Header({ isDarkMode, setIsDarkMode, scrollPercent }: Hea
         className={`fixed top-[36px] left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
             ? isDarkMode
-              ? "bg-[#0A0A0B]/90 backdrop-blur-md border-b border-white/10 shadow-xl"
+              ? "bg-[#0B1426]/90 backdrop-blur-md border-b border-[#334155] shadow-xl"
               : "bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-md"
             : "bg-transparent border-b border-transparent"
         }`}
       >
         {/* Scroll Progress Indicator Bar */}
         <div 
-          className="h-[3px] bg-gradient-to-r from-emerald-500 via-sky-500 to-emerald-400 origin-left transition-all duration-300 relative z-50"
+          className="h-[3px] bg-gradient-to-r from-[#D4AF37] via-amber-500 to-yellow-450 origin-left transition-all duration-300 relative z-50"
           style={{ width: `${scrollPercent}%` }}
         />
 
@@ -66,14 +66,14 @@ export default function Header({ isDarkMode, setIsDarkMode, scrollPercent }: Hea
                 className="group flex flex-col items-start"
               >
                 <div className="flex items-center space-x-1.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 group-hover:scale-125 transition-transform duration-300 animate-pulse" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#D4AF37] group-hover:scale-125 transition-transform duration-300 animate-pulse" />
                   <span className={`text-[15px] font-mono tracking-wider uppercase font-bold ${
                     isDarkMode ? "text-white" : "text-slate-900"
                   }`}>
                     G.R.R
                   </span>
                 </div>
-                <span className="text-[10px] font-mono text-slate-400 tracking-tight group-hover:text-emerald-500 transition-colors">
+                <span className="text-[10px] font-mono text-slate-400 tracking-tight group-hover:text-[#D4AF37] transition-colors">
                   FINTECH PORTFOLIO
                 </span>
               </a>
@@ -91,7 +91,7 @@ export default function Header({ isDarkMode, setIsDarkMode, scrollPercent }: Hea
                   }`}
                 >
                   {link.name}
-                  <span className="absolute bottom-0 left-2 right-2 h-[2px] bg-emerald-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                  <span className="absolute bottom-0 left-2 right-2 h-[2px] bg-[#D4AF37] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                 </a>
               ))}
             </nav>
@@ -102,7 +102,7 @@ export default function Header({ isDarkMode, setIsDarkMode, scrollPercent }: Hea
               <a
                 href="#contact"
                 onClick={(e) => handleNavClick(e, "#contact")}
-                className="bg-emerald-500/10 hover:bg-emerald-500/20 active:scale-95 text-emerald-500 text-[11px] font-mono py-1 px-3 rounded-full border border-emerald-500/30 flex items-center space-x-1.5 transition-all"
+                className="bg-[#D4AF37]/10 hover:bg-[#D4AF37]/20 active:scale-95 text-[#D4AF37] text-[11px] font-mono py-1 px-3 rounded-full border border-[#D4AF37]/30 flex items-center space-x-1.5 transition-all"
               >
                 <Briefcase className="w-3.5 h-3.5 animate-bounce" />
                 <span className="font-semibold uppercase tracking-wider">Open to Opportunities</span>
@@ -153,7 +153,7 @@ export default function Header({ isDarkMode, setIsDarkMode, scrollPercent }: Hea
         {/* Mobile Navigation Panel */}
         {isMenuOpen && (
           <div className={`md:hidden px-4 pt-2 pb-4 border-b ${
-            isDarkMode ? "bg-[#0A0A0B] border-white/10" : "bg-white border-slate-200"
+            isDarkMode ? "bg-[#0B1426] border-[#334155]" : "bg-white border-slate-200"
           }`}>
             <nav className="flex flex-col space-y-3">
               {navLinks.map((link) => (
@@ -168,11 +168,11 @@ export default function Header({ isDarkMode, setIsDarkMode, scrollPercent }: Hea
                   {link.name}
                 </a>
               ))}
-              <hr className={isDarkMode ? "border-white/10" : "border-slate-150"} />
+              <hr className={isDarkMode ? "border-[#334155]" : "border-slate-150"} />
               <a
                 href="#contact"
                 onClick={(e) => handleNavClick(e, "#contact")}
-                className="inline-flex items-center justify-center space-x-2 bg-emerald-500 text-white text-[11px] font-mono py-2 rounded-lg font-bold uppercase tracking-wider shadow-md"
+                className="inline-flex items-center justify-center space-x-2 bg-[#D4AF37] text-[#0B1426] text-[11px] font-mono py-2 rounded-lg font-bold uppercase tracking-wider shadow-md"
               >
                 <Briefcase className="w-3.5 h-3.5" />
                 <span>Open to Opportunities in UK & Worldwide</span>

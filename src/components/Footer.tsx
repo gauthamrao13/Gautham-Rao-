@@ -23,7 +23,7 @@ export default function Footer({ isDarkMode }: FooterProps) {
   return (
     <footer className={`py-12 border-t relative z-15 transition-colors duration-300 ${
       isDarkMode 
-        ? "bg-black border-white/10 text-slate-400" 
+        ? "bg-[#111827] border-[#334155] text-slate-400" 
         : "bg-slate-100 border-slate-200 text-slate-600"
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,7 +33,7 @@ export default function Footer({ isDarkMode }: FooterProps) {
           {/* Identity column */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-1.5">
             <div className="flex items-center space-x-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
               <span className={`text-sm font-mono tracking-wider font-bold ${isDarkMode ? "text-white" : "text-slate-900"}`}>
                 GAUTHAM RAO
               </span>
@@ -48,8 +48,8 @@ export default function Footer({ isDarkMode }: FooterProps) {
             <a
               href="#contact"
               onClick={handleScrollToContact}
-              className={`p-2 rounded-lg border hover:text-emerald-500 transition-colors ${
-                isDarkMode ? "border-white/10 text-slate-300 hover:bg-white/5" : "border-slate-200 text-slate-600 hover:bg-white"
+              className={`p-2 rounded-lg border hover:text-[#D4AF37] transition-colors ${
+                isDarkMode ? "border-[#334155] text-slate-300 hover:bg-[#D4AF37]/5" : "border-slate-200 text-slate-600 hover:bg-white"
               }`}
               title="Official LinkedIn Channel (Scroll to Copy)"
             >
@@ -57,8 +57,8 @@ export default function Footer({ isDarkMode }: FooterProps) {
             </a>
             <a
               href={`mailto:${PERSONAL_BIO.email}`}
-              className={`p-2 rounded-lg border hover:text-emerald-500 transition-colors ${
-                isDarkMode ? "border-white/10 text-slate-300 hover:bg-white/5" : "border-slate-200 text-slate-600 hover:bg-white"
+              className={`p-2 rounded-lg border hover:text-[#D4AF37] transition-colors ${
+                isDarkMode ? "border-[#334155] text-slate-300 hover:bg-[#D4AF37]/5" : "border-slate-200 text-slate-600 hover:bg-white"
               }`}
               title="Direct Outlook Mailbox"
             >
@@ -68,8 +68,8 @@ export default function Footer({ isDarkMode }: FooterProps) {
               href={PERSONAL_BIO.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={`p-2 rounded-lg border hover:text-emerald-500 transition-colors ${
-                isDarkMode ? "border-white/10 text-slate-300 hover:bg-white/5" : "border-slate-200 text-slate-600 hover:bg-white"
+              className={`p-2 rounded-lg border hover:text-[#D4AF37] transition-colors ${
+                isDarkMode ? "border-[#334155] text-slate-300 hover:bg-[#D4AF37]/5" : "border-slate-200 text-slate-600 hover:bg-white"
               }`}
               title="Official GitHub Profile"
             >
@@ -82,10 +82,10 @@ export default function Footer({ isDarkMode }: FooterProps) {
             <a
               href="#top"
               onClick={scrollToTop}
-              className="inline-flex items-center space-x-1.5 font-mono text-xs text-emerald-500 font-bold hover:text-emerald-400 transition-colors"
+              className="inline-flex items-center space-x-1.5 font-mono text-xs text-[#D4AF37] font-bold hover:text-amber-400 transition-colors"
             >
               <span>Back To Top</span>
-              <div className="p-1.5 bg-emerald-500/10 rounded-lg shrink-0">
+              <div className="p-1.5 bg-[#D4AF37]/10 rounded-lg shrink-0">
                 <ArrowUp className="w-3.5 h-3.5" />
               </div>
             </a>
@@ -94,7 +94,7 @@ export default function Footer({ isDarkMode }: FooterProps) {
         </div>
 
         {/* Bottom copyright declaration */}
-        <hr className={`my-8 ${isDarkMode ? "border-white/10" : "border-slate-200"}`} />
+        <hr className={`my-8 ${isDarkMode ? "border-[#334155]" : "border-slate-200"}`} />
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[10px] font-mono text-slate-400 uppercase text-center sm:text-left">
@@ -103,11 +103,11 @@ export default function Footer({ isDarkMode }: FooterProps) {
 
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
             <div className="flex items-center space-x-1.5 text-[9px] font-mono text-slate-500 uppercase">
-              <ShieldCheck className="w-4 h-4 text-emerald-500" />
+              <ShieldCheck className="w-4 h-4 text-[#D4AF37]" />
               <span>Secure Enterprise Architecture Compiled • 2026 OK</span>
             </div>
-            <div className="text-[10px] font-mono text-emerald-500/80 uppercase tracking-wider font-extrabold text-center sm:text-right">
-              Designed & Developed via <span className="underline decoration-emerald-500/40">Google AI Studio</span>
+            <div className="text-[10px] font-mono text-[#D4AF37]/80 uppercase tracking-wider font-extrabold text-center sm:text-right">
+              Designed & Developed via <span className="underline decoration-[#D4AF37]/40">Google AI Studio</span>
             </div>
           </div>
         </div>

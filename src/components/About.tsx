@@ -18,7 +18,7 @@ export default function About({ isDarkMode }: AboutProps) {
     <section 
       id="about" 
       className={`py-20 md:py-28 relative transition-colors duration-300 ${
-        isDarkMode ? "bg-[#0A0A0B] text-slate-200" : "bg-white text-slate-800"
+        isDarkMode ? "bg-[#0B1426] text-[#F8FAFC]" : "bg-white text-slate-800"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -26,8 +26,8 @@ export default function About({ isDarkMode }: AboutProps) {
         {/* Section Header */}
         <div className="flex flex-col space-y-2 mb-12 sm:mb-16">
           <div className="flex items-center space-x-2">
-            <span className="w-1.5 h-6 bg-emerald-500 rounded-full" />
-            <span className="text-xs font-mono text-emerald-500 uppercase tracking-widest font-bold">
+            <span className="w-1.5 h-6 bg-[#D4AF37] rounded-full" />
+            <span className="text-xs font-mono text-[#D4AF37] uppercase tracking-widest font-bold">
               Professional Brief
             </span>
           </div>
@@ -36,7 +36,7 @@ export default function About({ isDarkMode }: AboutProps) {
           }`}>
             About Gautham
           </h2>
-          <div className="h-[1px] w-20 bg-emerald-500/50 mt-1" />
+          <div className="h-[1px] w-20 bg-[#D4AF37]/50 mt-1" />
         </div>
 
         {/* Content Bento Grid */}
@@ -51,26 +51,26 @@ export default function About({ isDarkMode }: AboutProps) {
             </h3>
             
             <p className={`text-base leading-relaxed ${
-              isDarkMode ? "text-slate-400" : "text-slate-600"
+              isDarkMode ? "text-[#CBD5E1]" : "text-slate-600"
             }`}>
               With an rigorous academic foundation and hands-on exposure to audit processes, compliance, and reporting cycles, I specialise in distilling multidimensional raw transaction datasets into highly reliable business projections. I believe inside a volatile credit environment, risk transparency and treasury stewardship represent a bank's most primary assets.
             </p>
 
             <p className={`text-base leading-relaxed ${
-              isDarkMode ? "text-slate-400" : "text-slate-600"
+              isDarkMode ? "text-[#CBD5E1]" : "text-slate-600"
             }`}>
               During my studies for my MSc at Lancaster University, I have acquired advanced competencies in credit risk identification, money intermediation pipelines, and quantitative methodologies. These methodologies bolster my execution of corporate valuations and audit routines with utmost precision.
             </p>
 
             {/* Quick bullets */}
             <div className="pt-4">
-              <h4 className="text-xs font-mono uppercase text-emerald-500 tracking-wider font-extrabold mb-4">
+              <h4 className="text-xs font-mono uppercase text-[#D4AF37] tracking-wider font-extrabold mb-4">
                 Core Strengths & Highlights:
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 {highlights.map((item, idx) => (
                   <div key={idx} className="flex items-start space-x-2.5">
-                    <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                    <CheckCircle className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
                     <span className={`text-xs font-sans font-medium line-clamp-2 ${
                       isDarkMode ? "text-slate-300" : "text-slate-600"
                     }`}>
@@ -87,7 +87,7 @@ export default function About({ isDarkMode }: AboutProps) {
             
             {/* Quick Focus Card */}
             <div className={`p-6 rounded-2xl border ${
-              isDarkMode ? "bg-[#0D0D0E]/40 border-white/10" : "bg-white border-slate-150 shadow-sm"
+              isDarkMode ? "bg-[#1E293B] border-[#334155]" : "bg-white border-slate-150 shadow-sm"
             }`}>
               <h4 className="text-xs font-mono uppercase text-slate-400 tracking-wider font-extrabold mb-2.5">
                 Target Positions:

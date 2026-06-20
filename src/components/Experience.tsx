@@ -10,7 +10,7 @@ export default function Experience({ isDarkMode }: ExperienceProps) {
     <section 
       id="experience" 
       className={`py-20 md:py-28 relative transition-colors duration-300 ${
-        isDarkMode ? "bg-[#0A0A0B] text-slate-200" : "bg-white text-slate-800"
+        isDarkMode ? "bg-[#0B1426] text-[#F8FAFC]" : "bg-white text-slate-800"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -22,8 +22,8 @@ export default function Experience({ isDarkMode }: ExperienceProps) {
           <div className="flex flex-col space-y-8">
             <div className="flex flex-col space-y-2 mb-4">
               <div className="flex items-center space-x-2">
-                <span className="w-1.5 h-6 bg-emerald-500 rounded-full" />
-                <span className="text-xs font-mono text-emerald-500 uppercase tracking-widest font-bold">
+                <span className="w-1.5 h-6 bg-[#D4AF37] rounded-full" />
+                <span className="text-xs font-mono text-[#D4AF37] uppercase tracking-widest font-bold">
                   Corporate Journey
                 </span>
               </div>
@@ -32,7 +32,7 @@ export default function Experience({ isDarkMode }: ExperienceProps) {
               }`}>
                 Professional Experience
               </h2>
-              <div className="h-[1px] w-16 bg-emerald-500/50 mt-1" />
+              <div className="h-[1px] w-16 bg-[#D4AF37]/50 mt-1" />
             </div>
 
             <div className="space-y-8">
@@ -41,7 +41,7 @@ export default function Experience({ isDarkMode }: ExperienceProps) {
                   key={idx}
                   className={`relative p-6 sm:p-8 rounded-2xl border transition-all ${
                     isDarkMode 
-                      ? "bg-[#0D0D0E]/60 border-white/10 hover:border-white/20"
+                      ? "bg-[#1E293B] border-[#334155] hover:border-[#D4AF37]/20"
                       : "bg-slate-50 border-slate-200 hover:border-slate-300 hover:shadow-md"
                   }`}
                 >
@@ -54,7 +54,7 @@ export default function Experience({ isDarkMode }: ExperienceProps) {
                         {job.role}
                       </h3>
                       <div className="flex items-center space-x-2 mt-1">
-                        <span className="text-xs font-mono text-emerald-500 font-bold uppercase">{job.company}</span>
+                        <span className="text-xs font-mono text-[#D4AF37] font-bold uppercase">{job.company}</span>
                         <span className="text-slate-400 font-sans text-xs">•</span>
                         <span className="flex items-center text-slate-400 font-sans text-[11px]">
                           <MapPin className="w-3 h-3 mr-1 shrink-0" />
@@ -64,7 +64,7 @@ export default function Experience({ isDarkMode }: ExperienceProps) {
                     </div>
                     
                     <div className="shrink-0">
-                      <span className="inline-flex items-center text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded border border-emerald-500/20">
+                      <span className="inline-flex items-center text-[10px] font-mono font-bold bg-[#D4AF37]/10 text-[#D4AF37] px-2 py-1 rounded border border-[#D4AF37]/20">
                         <Calendar className="w-3.5 h-3.5 mr-1" />
                         {job.duration}
                       </span>
@@ -75,7 +75,7 @@ export default function Experience({ isDarkMode }: ExperienceProps) {
                   <div className="space-y-3.5">
                     {job.bullets.map((bullet, bulletIdx) => (
                       <div key={bulletIdx} className="flex items-start space-x-2.5 group/bullet">
-                        <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 shrink-0 group-hover/bullet:scale-125 transition-transform" />
+                        <span className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full mt-2 shrink-0 group-hover/bullet:scale-125 transition-transform" />
                         <p className={`text-xs sm:text-[13px] leading-relaxed font-sans ${
                           isDarkMode ? "text-slate-300" : "text-slate-650"
                         }`}>
@@ -93,8 +93,8 @@ export default function Experience({ isDarkMode }: ExperienceProps) {
           <div className="flex flex-col space-y-8">
             <div className="flex flex-col space-y-2 mb-4">
               <div className="flex items-center space-x-2">
-                <span className="w-1.5 h-6 bg-emerald-500 rounded-full" />
-                <span className="text-xs font-mono text-emerald-500 uppercase tracking-widest font-bold">
+                <span className="w-1.5 h-6 bg-[#D4AF37] rounded-full" />
+                <span className="text-xs font-mono text-[#D4AF37] uppercase tracking-widest font-bold">
                   Academic Roots
                 </span>
               </div>
@@ -103,7 +103,7 @@ export default function Experience({ isDarkMode }: ExperienceProps) {
               }`}>
                 Academic Credentials
               </h2>
-              <div className="h-[1px] w-16 bg-emerald-500/50 mt-1" />
+              <div className="h-[1px] w-16 bg-[#D4AF37]/50 mt-1" />
             </div>
 
             <div className="space-y-6">
@@ -113,10 +113,10 @@ export default function Experience({ isDarkMode }: ExperienceProps) {
                   className={`p-6 sm:p-8 rounded-2xl border transition-all ${
                     edu.isCurrentlyPursuing
                       ? isDarkMode
-                        ? "bg-emerald-500/5 border-emerald-500/20 shadow-lg shadow-emerald-500/5"
-                        : "bg-emerald-500/[0.02] border-emerald-500/30 shadow-md shadow-emerald-500/[0.02]"
+                        ? "bg-[#D4AF37]/5 border-[#D4AF37]/20 shadow-lg shadow-[#D4AF37]/5"
+                        : "bg-amber-500/[0.02] border-[#D4AF37]/30 shadow-md shadow-[#D4AF37]/[0.02]"
                       : isDarkMode
-                      ? "bg-[#0D0D0E]/60 border-white/10 hover:border-white/20"
+                      ? "bg-[#1E293B] border-[#334155] hover:border-[#D4AF37]/20"
                       : "bg-slate-50 border-slate-200 hover:border-slate-300 hover:shadow-md"
                   }`}
                 >
@@ -127,13 +127,13 @@ export default function Experience({ isDarkMode }: ExperienceProps) {
                       }`}>
                         {edu.degree}
                       </h3>
-                      <p className="text-xs font-mono text-emerald-500 mt-0.5">{edu.institution}</p>
+                      <p className="text-xs font-mono text-[#D4AF37] mt-0.5">{edu.institution}</p>
                     </div>
 
                     <div className="shrink-0">
                       <span className={`inline-flex items-center text-[10px] font-mono font-bold px-2 py-0.5 rounded border ${
                         edu.isCurrentlyPursuing
-                          ? "bg-emerald-500/10 text-emerald-400 border-emerald-500/20 uppercase tracking-widest animate-pulse"
+                          ? "bg-[#D4AF37]/10 text-[#D4AF37] border-[#D4AF37]/20 uppercase tracking-widest animate-pulse"
                           : "bg-slate-500/5 text-slate-400 border-slate-500/20"
                       }`}>
                         {edu.duration}
@@ -147,7 +147,7 @@ export default function Experience({ isDarkMode }: ExperienceProps) {
                     {edu.gpaOrGrade && (
                       <>
                         <span>•</span>
-                        <span className="font-mono text-emerald-500 bg-emerald-500/5 px-2 py-0.5 rounded text-[11px] font-extrabold">{edu.gpaOrGrade}</span>
+                        <span className="font-mono text-[#D4AF37] bg-[#D4AF37]/10 px-2 py-0.5 rounded text-[11px] font-extrabold">{edu.gpaOrGrade}</span>
                       </>
                     )}
                   </div>

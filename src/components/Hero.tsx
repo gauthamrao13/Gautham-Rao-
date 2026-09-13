@@ -89,8 +89,8 @@ export default function Hero({ isDarkMode }: HeroProps) {
               </a>
 
               <a
-                href="/assets/Gautham_Rao_Resume.pdf"
-                download="Gautham_Rao_Resume.pdf"
+                href="/assets/Gautham_RaoResume.pdf"
+                download="Gautham_RaoResume.pdf"
                 target="_blank"
                 className={`inline-flex items-center justify-center font-mono text-xs uppercase tracking-wider font-bold py-3.5 px-6 rounded-lg border transition-all ${
                   isDarkMode 

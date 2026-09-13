@@ -28,7 +28,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     description: "Developed a comprehensive three-statement discounted cash flow (DCF) valuation model for Tesla, projecting future cash flows and calculating intrinsic value using standard pro-forma forecasting methodologies.",
     keySkills: ["Valuation Modelling", "WACC Estimation", "Pro-forma Forecasting", "Sensitivity Analysis", "Advanced Excel"],
     excelUrl: "/assets/Tesla_DCF_Valuation_Model.xlsx",
-    googleSheetUrl: "https://docs.google.com/spreadsheets/d/1u_HZ1mzoPuojsIwWm2x6K3wCiKUEbL6dhwI0s8lUPrw/edit?usp=sharing",
+    googleSheetUrl: "https://docs.google.com/spreadsheets/d/1xRBssxv0Uqqszb0xBxN5EtSH5_gQggi6BjTwHFNZTfs/edit?usp=drive_link",
     metrics: [
       { label: "Valuation Methodology", value: "Discounted Cash Flow (DCF)" },
       { label: "Analysis Horizon", value: "5-Year Pro-Forma Forecast" }
@@ -41,7 +41,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     description: "Constructed a professional corporate valuation and five-year pro-forma forecast model for Barclays PLC studying historical credit assets, operating margins, capital ratios, and leverage indicators.",
     keySkills: ["Operating Models", "Credit Metrics", "Capital Ratios", "Valuation Analysis", "Financial Modeling"],
     excelUrl: "/assets/Barclays_Valuation_Model.xlsx",
-    googleSheetUrl: "https://docs.google.com/spreadsheets/d/16QGkcBG7-oxIpefDFz6Mq2NGZXyCWnCXLG6eumiwO5c/edit?usp=sharing",
+    googleSheetUrl: "https://docs.google.com/spreadsheets/d/1P_m0GYJN-Mld-qLxUnebRbpUvDbXW6oPceF8dL5Pm-4/edit?usp=drive_link",
     metrics: [
       { label: "Analysis Focus", value: "Operating Performance" },
       { label: "Reporting Standards", value: "IFRS / UK GAAP Compliant" }

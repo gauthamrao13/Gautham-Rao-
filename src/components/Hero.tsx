@@ -87,21 +87,7 @@ export default function Hero({ isDarkMode }: HeroProps) {
                 <span>View on LinkedIn</span>
                 <MoveRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
-
-              <a
-                href="/assets/Gautham_RaoResume.pdf"
-                download="Gautham_RaoResume.pdf"
-                target="_blank"
-                className={`inline-flex items-center justify-center font-mono text-xs uppercase tracking-wider font-bold py-3.5 px-6 rounded-lg border transition-all ${
-                  isDarkMode 
-                    ? "border-[#D4AF37]/20 text-[#D4AF37] bg-[#D4AF37]/5 hover:bg-[#D4AF37]/10 hover:border-[#D4AF37]/35" 
-                    : "border-amber-500/20 text-amber-700 bg-amber-500/[0.02] hover:bg-[#D4AF37]/[0.05] hover:border-[#D4AF37]/35"
-                }`}
-              >
-                <FileText className="w-4 h-4 mr-2" />
-                Download Resume
-              </a>
-
+              
               <a
                 href="#projects"
                 onClick={handleScrollToProjects}
